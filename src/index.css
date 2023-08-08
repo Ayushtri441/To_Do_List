@@ -1,0 +1,213 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  body, input, button {
+    font-family: 'Roboto', sans-serif;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  margin: 100px 370px;
+  margin-bottom: 15px;text-align: center;
+}
+.container:hover{
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.heading {
+  color: #333333;
+  font-size: 50px;
+  height: 5=60px;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* //header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 50px;
+  padding: 3px 70px;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; 
+}
+
+.logo {
+  font-size: 2em;
+  color: #ded8d8;
+  cursor: default;
+}
+
+.logo span {
+  color: #ff7200;
+}
+
+.navigation {
+  
+  margin-left: -300px;
+ 
+}
+
+.navigation a {
+  font-size: 1.1em;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 40px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.navigation a:hover {
+  color: #ff7200;
+}
+
+.copy{
+    bottom: 0;
+    left: 550px;
+    text-align: center;
+}
+.btns{
+  display: flex;
+  justify-content: space-evenly;
+}
+.btns button{
+    height: 40px;
+    border-radius: 4px;
+    margin-left:10px ;
+    margin-right: 10px;
+    width: auto;
+    padding: 10px;
+    background-color: black;
+    color: white;
+
+}
+.btns button:hover{
+ 
+  background-color: #333333;
+  cursor: pointer;
+
+
+}
+.btns input{
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+}
+/* Todo */
+.input{
+  display: flex;
+  justify-content: center;
+}
+.input input {
+      width: 200px;
+      height: 30px;
+      padding: 3px 10px;
+      border: 2px solid black;
+      font-size: 15px;
+}
+.input button{
+  margin: 0px 10px;
+  border-radius: 5px;
+  height: 40px;
+}
+.input button:hover {
+    background-color: #aaa;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+ul.todo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+ul.todo li {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  
+  min-height: 40px;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.30);
+  border-bottom: 2px solid black;
+  word-break: break-word;
+}
+ul.todo li .value {
+  width: 80%;
+  padding: 3px 15px;
+  text-align: center;
+}
+.info{
+  font-size: 20px;
+ color: green;
+  text-decoration: underline;
+}
+
+ul.todo li .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+ul.todo li .buttons button {
+  margin-left: 3px;
+}
+
+ul.todo li .buttons button:hover {
+  
+  background-color: #aaa;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+ul.todo#completed {
+  position: relative;
+ 
+}
+
+
+ul.todo#todo:empty:after {
+  content: 'You have nothing to-do!';
+}
+
+ul.todo#completed:empty:after {
+  content: 'You have yet to complete any tasks.';
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
